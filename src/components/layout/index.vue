@@ -1,5 +1,5 @@
 <template>
     <div>
-        测试
+        模板
     </div>
 </template>

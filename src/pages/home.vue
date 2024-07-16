@@ -1,5 +1,5 @@
 <template>
     <div>
-        测试
+        主页
     </div>
 </template>
