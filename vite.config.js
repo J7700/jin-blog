@@ -1,7 +1,13 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-// 解析路径
+// 解析路径 用于配置别名
 import { resolve } from "path";
+
+// 图标插件 用于自动导入图标
+import Icons from "unplugin-icons/vite";
+
+// svg图标插件
+import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 
 // tailwindcss 插件
 import tailwindcss from "tailwindcss";
@@ -67,6 +73,14 @@ export default defineConfig({
     // vue 组件自动导入
     Components({
       resolvers: [ElementPlusResolver()],
+    }),
+    Icons({
+      // 实验性功能 当您导入图标时，它会自动检测合适的包管理器（npm、yarn 或 pnpm）来安装图标集。
+      autoInstall: true,
+    }),
+    // svg
+    createSvgIconsPlugin({
+      iconDirs: [resolve(process.cwd(), "src/assets/image/icons/svg")],
     }),
   ],
   // 配置别名
