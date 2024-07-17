@@ -15,7 +15,7 @@ export default {
     utils: true, // 响应式和工具类添加
     prefix: "", // 所有的类名添加前缀 
     logs: false, // CSS 构建时在命令行窗口输出日志。
-    themeRoot: ":root", // 选择器，设置主题变量 
+    themeRoot: ":root", // 设置主题变量 
   },
 };
 
