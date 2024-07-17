@@ -7,6 +7,9 @@ const { getUserId } = storeToRefs(user());
 const add = () => {
   user().setUserId();
 };
+
+import ThemeController from "@/components/theme-controller/index.vue";
+
 </script>
 
 <template>
@@ -14,6 +17,7 @@ const add = () => {
     主页
     {{ getUserId }}
     <el-button type="primary" @click="add">点我</el-button>
+    <ThemeController></ThemeController>
   </div>
 </template>
 
