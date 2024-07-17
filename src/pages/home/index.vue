@@ -9,7 +9,6 @@ const add = () => {
 };
 
 import ThemeController from "@/components/theme-controller/index.vue";
-
 </script>
 
 <template>

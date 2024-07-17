@@ -8,7 +8,7 @@ export default {
     require('daisyui'),
   ],
   daisyui: {
-    themes: false, // 包含所有的主题
+    themes: true, // 包含所有的主题
     darkTheme: "dark", // 默认暗黑主题
     base: true, // 添加基础样式
     styled: true, // 组件默认的颜色和样式
