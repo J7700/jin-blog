@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+
 // 解析路径 用于配置别名
 import { resolve } from "path";
 
@@ -83,10 +84,10 @@ export default defineConfig({
       iconDirs: [resolve(process.cwd(), "src/assets/image/icons/svg")],
     }),
   ],
-  // 配置别名
   resolve: {
     alias: {
-      "@": resolve(__dirname, "/src"),
-    },
-  },
+      // '@' 将指向 'src' 目录
+      "@": resolve(__dirname, "src"),
+    }
+  }
 });
