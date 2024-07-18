@@ -1,11 +1,15 @@
-<script setup></script>
+<script setup>
+import ThemeController from "@/components/theme-controller/index.vue";
+</script>
 
 <template>
   <div class="header-wrap">
     <div class="header-left">
       左侧
     </div>
-    <div class="header-right">右侧</div>
+    <div class="header-right">
+      <ThemeController class="theme-controller" </ThemeController>
+    </div>
   </div>
 </template>
 
@@ -23,6 +27,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    .theme-controller {
+      margin-right: 100px;
+    }
   }
 }
 </style>

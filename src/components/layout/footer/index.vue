@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div>
+  <div class="">
     底部
   </div>
 </template>
