@@ -5,7 +5,7 @@ import IconAccountBox from "~icons/mdi/account-box";
 <template>
   <div>
     主体
-    <icon-account-box style="font-size: 2em; color: red" />
+    <icon-account-box style="font-size: 1em; color: red" />
     <router-view></router-view>
   </div>
 </template>
