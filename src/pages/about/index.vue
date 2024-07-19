@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="about-wrap">
     关于
     <router-link to="/home">
       <button class="btn btn-primary">Primary</button>
@@ -9,4 +9,9 @@
 
 <script setup></script>
 
-<style scoped></style>
+<style scoped>
+.about-wrap {
+  height: 200px;
+  background-color: aqua;
+}
+</style>

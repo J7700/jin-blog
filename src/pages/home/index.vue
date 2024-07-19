@@ -12,7 +12,7 @@ import IconAccountBox from "~icons/mdi/account-box";
 </script>
 
 <template>
-  <div class="bg-base-200">
+  <div class="home-wrap bg-base-200">
     <!-- <icon-account-box style="font-size: 1em; color: red" /> -->
     <!-- {{ getUserId }} -->
     <!-- <el-button type="primary" @click="add">点我</el-button> -->
@@ -36,4 +36,9 @@ import IconAccountBox from "~icons/mdi/account-box";
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.home-wrap{
+  height: 100%;
+  background-color: aqua;
+}
+</style>
