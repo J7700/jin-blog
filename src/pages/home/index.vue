@@ -27,7 +27,7 @@ import IconAccountBox from "~icons/mdi/account-box";
 <style lang="scss" scoped>
 .home-wrap {
   .home-content {
-    height: 200px;
+    height: 200vh;
   }
 }
 </style>

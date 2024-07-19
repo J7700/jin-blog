@@ -17,7 +17,7 @@
 import { ref, onMounted } from "vue";
 import { useThemeStore } from "@/store/themeStore";
 
-import ChevronDownCircle from "~icons/mdi/chevron-down-circle";
+import ChevronDownCircle from "~icons/icon-park-solid/down-c";
 
 const { changeThemeTo, getCurrentThemeIndex } = useThemeStore();
 
@@ -30,10 +30,7 @@ const themeList = ref([
   "garden",
   "forest",
   "lofi",
-  "pastel",
   "fantasy",
-  "wireframe",
-  "black",
   "luxury",
   "dracula",
   "cmyk",
