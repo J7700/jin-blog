@@ -3,7 +3,7 @@ import ThemeController from "@/components/theme-controller/index.vue";
 </script>
 
 <template>
-  <div class="header-wrap">
+  <div class="header-wrap bg-base-200">
     <div class="header-left">
       左侧
     </div>

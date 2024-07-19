@@ -1,8 +1,8 @@
 <template>
   <div class="dropdown">
-    <div tabindex="0" role="button" class="btn m-1">
+    <div tabindex="0" role="button" class="btn btn-outline m-1">
       Theme
-      <svg-icon name="test" class="w-[2rem] h-[2rem]" </svg-icon>
+      <ChevronDownCircle style="font-size: 1.2em" class="text-primary" />
     </div>
     <ul tabindex="0" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52">
       <li v-for="(theme, index) in themeList" @click="changeTheme(index, theme)">
@@ -16,6 +16,8 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { useThemeStore } from "@/store/themeStore";
+
+import ChevronDownCircle from "~icons/mdi/chevron-down-circle";
 
 const { changeThemeTo, getCurrentThemeIndex } = useThemeStore();
 

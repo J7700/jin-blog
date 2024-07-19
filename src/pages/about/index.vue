@@ -1,5 +1,5 @@
 <template>
-  <div class="about-wrap bg-green-500">
+  <div class="about-wrap">
     关于
     <router-link to="/home">
       <button class="btn btn-primary">回到首页</button>

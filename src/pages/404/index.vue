@@ -1,5 +1,5 @@
 <template>
-    <div class="error-wrap bg-green-500">
+    <div class="error-wrap">
         404
         <router-link to="/home">
             <button class="btn btn-primary">回到首页</button>
