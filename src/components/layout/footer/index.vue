@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="">
+  <div class="footer-wrap">
     底部
   </div>
 </template>
