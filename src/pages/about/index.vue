@@ -1,8 +1,8 @@
 <template>
-  <div class="about-wrap">
+  <div class="about-wrap bg-green-500">
     关于
     <router-link to="/home">
-      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-primary">回到首页</button>
     </router-link>
   </div>
 </template>
@@ -11,7 +11,6 @@
 
 <style scoped>
 .about-wrap {
-  height: 200px;
-  background-color: aqua;
+  height: 600px;
 }
 </style>

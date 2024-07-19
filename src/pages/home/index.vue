@@ -18,7 +18,7 @@ import IconAccountBox from "~icons/mdi/account-box";
     <!-- <el-button type="primary" @click="add">点我</el-button> -->
     <div class="home-content">
       <router-link to="/about">
-        <button class="btn btn-primary">Get Started</button>
+        <button class="btn btn-primary">去到关于</button>
       </router-link>
     </div>
   </div>
@@ -28,7 +28,6 @@ import IconAccountBox from "~icons/mdi/account-box";
 .home-wrap {
   .home-content {
     height: 200px;
-    background-color: blue;
   }
 }
 </style>
