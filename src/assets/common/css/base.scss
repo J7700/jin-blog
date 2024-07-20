@@ -1,8 +1,14 @@
 @import url("./tailwind.css");
 @import url("./layout.scss");
+
 * {
   margin: 0;
   padding: 0;
+  scrollbar-color:unset;
+}
+
+*:hover {
+  scrollbar-color:unset;
 }
 
 html {
@@ -15,6 +21,32 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
+  // scrollbar-width: none;
+  // -ms-overflow-style: none;
 }
 
+body::-webkit-scrollbar {
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    hsl(0deg, 100%, 50%, 0.4) 0%,
+    hsl(40deg, 100%, 50%) 20%,
+    hsl(80deg, 100%, 50%) 30%,
+    hsl(120deg, 100%, 50%) 40%,
+    hsl(180deg, 100%, 50%) 50%,
+    hsl(250deg, 100%, 50%) 80%,
+    hsl(320deg, 100%, 50%, 0.4) 100%
+  );
+  border-radius: 4px;
+}
 
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    hsl(0deg, 100%, 50%, 0) 0%,
+    hsl(0deg, 100%, 100%, 0.9) 20%,
+    hsl(0deg, 100%, 100%, 0.9) 80%,
+    hsl(0deg, 100%, 50%, 0) 100%
+  );
+  border-radius: 100%;
+}

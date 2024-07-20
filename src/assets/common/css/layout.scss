@@ -5,8 +5,8 @@
   right: 0;
   height: 60px;
   padding: 10px;
+  z-index: 999;
   border-bottom: 1px solid oklch(var(--b3));
-  z-index: 9999;
 }
 
 .main-wrap {

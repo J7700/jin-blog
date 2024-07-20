@@ -1,6 +1,11 @@
 {
     "cSpell.words": [
         "tailwindcss",
-        "unplugin"
+        "unplugin",
+        "daisyui",
+        "vueuse",
+        "pinia",
+        "iconify",
+        "tailwind",
     ]
 }

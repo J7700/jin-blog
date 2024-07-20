@@ -5,8 +5,8 @@ import PageHeader from "@/components/page-header/index.vue";
 
 <template>
   <div class="main-wrap bg-base-100">
+    <PageHeader></PageHeader>
     <div class="max-w-[80rem] mx-auto">
-      <PageHeader></PageHeader>
       <router-view></router-view>
     </div>
   </div>
