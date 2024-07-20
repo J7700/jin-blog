@@ -1,6 +1,6 @@
 <template>
   <div class="dropdown">
-    <div tabindex="0" role="button" class="btn btn-outline m-1">
+    <div tabindex="0" role="button" class="btn glass m-1">
       Theme
       <ChevronDownCircle style="font-size: 1.2em" class="text-primary" />
     </div>

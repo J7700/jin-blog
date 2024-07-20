@@ -10,10 +10,6 @@ import piniaPluginPersist from "pinia-plugin-persist";
 import "virtual:svg-icons-register";
 // 全局样式入口
 import "./assets/common/css/base.scss";
-// element-plus 暗黑主题
-// import "element-plus/theme-chalk/dark/css-vars.css";
-// element-plus样式
-// import "element-plus/dist/index.css";
 
 const app = createApp(App);
 

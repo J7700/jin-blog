@@ -50,7 +50,7 @@ const menuList = [
 </script>
 
 <template>
-  <div class="header-wrap bg-base-200">
+  <div class="header-wrap bg-base-700">
     <div class="header-left">
       <MdiAbjadHebrew class="logo text-primary"></MdiAbjadHebrew>
     </div>
@@ -58,7 +58,7 @@ const menuList = [
       <div class="flex justify-end px-2">
         <div v-for="menu in menuList" :key="menu.path" class="flex items-stretch">
           <div v-if="menu.children.length" :index="menu.path" class="dropdown dropdown-end">
-            <div tabindex="0" role="button" class="btn btn-outline m-1">
+            <div tabindex="0" role="button" class="btn glass m-1">
               <component class="menu-icon text-primary" :is="menu.icon"></component>
               {{ menu.title }}
             </div>
@@ -72,7 +72,7 @@ const menuList = [
             </ul>
           </div>
           <div v-else :index="menu.path">
-            <router-link :to="menu.path" class="btn btn-outline m-1">
+            <router-link :to="menu.path" class="btn glass m-1">
               <component class="menu-icon text-primary" :is="menu.icon"></component>
               {{ menu.title }}
             </router-link>
