@@ -116,6 +116,3 @@ const themeList = [
     id: "winter",
   },
 ];
-
-// 导出
-export default themeList;

@@ -18,7 +18,7 @@ import IconAccountBox from "~icons/mdi/account-box";
     <!-- <el-button type="primary" @click="add">点我</el-button> -->
     <div class="home-content">
       <router-link to="/about">
-        <button class="btn btn-primary">去到关于</button>
+        <button class="btn btn-primary mt-10">去到关于</button>
       </router-link>
     </div>
   </div>
@@ -27,7 +27,7 @@ import IconAccountBox from "~icons/mdi/account-box";
 <style lang="scss" scoped>
 .home-wrap {
   .home-content {
-    height: 93.75rem;
+    height: 1500px;
   }
 }
 </style>

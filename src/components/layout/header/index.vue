@@ -1,5 +1,5 @@
 <script setup>
-import { defineAsyncComponent } from "vue";
+import { ref, onMounted, onBeforeUnmount, defineAsyncComponent } from "vue";
 import ThemeController from "@/components/theme-controller/index.vue";
 import MdiAbjadHebrew from "~icons/mdi/abjad-hebrew";
 
@@ -47,10 +47,33 @@ const menuList = [
   },
 ];
 
+// vue3监听鼠标滚动时候header-wrap添加隐藏hide-header动画
+
+const scrollDirection = ref(null); // 用于存储滚动方向的响应式引用  
+
+// 处理滚轮事件的方法  
+const handleWheel = (event) => {
+  const deltaY = event.deltaY;
+  if (deltaY < 0) {
+    scrollDirection.value = 'up'; // 向上滚动  
+  } else if (deltaY > 0) {
+    scrollDirection.value = 'down'; // 向下滚动  
+  }
+};
+
+// 在组件挂载后添加监听器  
+onMounted(() => {
+  window.addEventListener('wheel', handleWheel);
+});
+
+// 在组件卸载前移除监听器  
+onBeforeUnmount(() => {
+  window.removeEventListener('wheel', handleWheel);
+});
 </script>
 
 <template>
-  <div class="header-wrap bg-base-700">
+  <div class="header-wrap" :class="{'hide-header': scrollDirection === 'down'}">
     <div class="header-left">
       <MdiAbjadHebrew class="logo text-primary"></MdiAbjadHebrew>
     </div>
@@ -78,8 +101,8 @@ const menuList = [
             </router-link>
           </div>
         </div>
+        <ThemeController class="theme-controller" </ThemeController>
       </div>
-      <ThemeController class="theme-controller" </ThemeController>
     </div>
   </div>
 </template>
@@ -109,9 +132,21 @@ const menuList = [
     display: flex;
     align-items: center;
     justify-content: flex-end;
+  }
+}
 
-    .theme-controller {
-      margin-right: 6rem;
+.hide-header {
+  animation-name: hideHeader;
+  animation-duration: .8s;
+  animation-fill-mode: forwards;
+
+  @keyframes hideHeader {
+    0% {
+      transform: translateY(0)
+    }
+
+    to {
+      transform: translateY(-60px)
     }
   }
 }

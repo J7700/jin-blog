@@ -68,6 +68,9 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
+      imports: [
+        "@vueuse/core",
+      ],
       // element plus组件按需自动引入
       resolvers: [ElementPlusResolver()],
     }),
@@ -88,6 +91,6 @@ export default defineConfig({
     alias: {
       // '@' 将指向 'src' 目录
       "@": resolve(__dirname, "src"),
-    }
-  }
+    },
+  },
 });
