@@ -1,27 +1,3 @@
-<template>
-  <div class="dropdown dropdown-bottom dropdown-end">
-    <div tabindex="0" role="button" class="btn glass m-1">
-      Theme
-      <ChevronDownCircle style="font-size: 1.2em" class="text-primary" />
-    </div>
-    <ul tabindex="0"
-      class="dropdown-content menu flex-row bg-base-100 rounded-box z-[1] w-[16rem] p-2 shadow mt-[10px] max-h-[300px]">
-      <li class="w-full" v-for="(theme, index) in themeList" @click="changeTheme($event, index, theme.id)">
-        <div :data-theme="theme.id" class="flex justify-between bg-transparent active:!bg-transparent">
-          <input type="radio" name="theme-dropdown" :aria-label="theme.name" :value="theme.id"
-            :checked="index == themeIndex" class="theme-controller btn btn-sm w-3/4 justify-normal" />
-          <div class="flex shrink-0 flex-wrap gap-1">
-            <div class="h-[1.25rem] w-2 rounded bg-primary" />
-            <div class="h-[1.25rem] w-2 rounded bg-secondary" />
-            <div class="h-[1.25rem] w-2 rounded bg-accent" />
-            <div class="h-[1.25rem] w-2 rounded bg-neutral" />
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-</template>
-
 <script setup>
 import { ref, onMounted } from "vue";
 import { useThemeStore } from "@/store/themeStore";
@@ -35,6 +11,8 @@ const themeIndex = ref(0);
 const mode = useColorMode({
   attribute: "data-theme",
   modes: {
+    light: "light",
+    dark: "dark",
     cupcake: "cupcake",
     bumblebee: "bumblebee",
     emerald: "emerald",
@@ -60,12 +38,15 @@ const mode = useColorMode({
     acid: "acid",
     lemonade: "lemonade",
     night: "night",
-    coffee: "coffee",
     winter: "winter",
   },
 });
 
 const themeList = ref([
+  {
+    name: "💖 jintheme",
+    id: "jintheme",
+  },
   {
     name: "🌝 light",
     id: "light",
@@ -175,10 +156,6 @@ const themeList = ref([
     id: "night",
   },
   {
-    name: "☕️ Coffee",
-    id: "coffee",
-  },
-  {
     name: "❄️ Winter",
     id: "winter",
   },
@@ -228,11 +205,48 @@ onMounted(() => {
 });
 </script>
 
+<template>
+  <div class="dropdown dropdown-bottom dropdown-end">
+    <div tabindex="0" role="button" class="btn glass m-1">
+      Theme
+      <ChevronDownCircle class="text-base-content" />
+    </div>
+    <ul
+      tabindex="0"
+      class="dropdown-content menu flex-row bg-base-100 rounded-box z-[1] w-[16rem] p-2 shadow mt-[10px] max-h-[300px]"
+    >
+      <li
+        class="w-full"
+        v-for="(theme, index) in themeList"
+        @click="changeTheme($event, index, theme.id)"
+      >
+        <div
+          :data-theme="theme.id"
+          class="flex justify-between bg-transparent active:!bg-transparent"
+        >
+          <input
+            type="radio"
+            name="theme-dropdown"
+            :aria-label="theme.name"
+            :value="theme.id"
+            :checked="index == themeIndex"
+            class="theme-controller btn btn-sm w-3/4 justify-normal"
+          />
+          <div class="flex shrink-0 flex-wrap gap-1">
+            <div class="h-[1.25rem] w-2 rounded bg-primary" />
+            <div class="h-[1.25rem] w-2 rounded bg-secondary" />
+            <div class="h-[1.25rem] w-2 rounded bg-accent" />
+            <div class="h-[1.25rem] w-2 rounded bg-neutral" />
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</template>
+
 <style scoped>
 .dropdown-content {
-  /* 添加竖直滚动条 */
   overflow-y: auto;
-  /* 隐藏横向滚动条 */
   overflow-x: hidden;
 }
 

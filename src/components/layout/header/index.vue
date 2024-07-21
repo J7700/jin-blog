@@ -2,20 +2,22 @@
 import { ref, onMounted, onBeforeUnmount, defineAsyncComponent } from "vue";
 import ThemeController from "@/components/theme-controller/index.vue";
 import MdiAbjadHebrew from "~icons/mdi/abjad-hebrew";
+import IconpParkSearch from "~icons/icon-park-outline/search";
+
 import useScrollDirection from "@/hooks/useScrollDirection";
 
 const menuList = [
   {
     title: "首页",
-    // icon: defineAsyncComponent(() => import("~icons/icon-park-solid/like/")),
-    icon: defineAsyncComponent(() => import("~icons/icon-park-outline/like/")),
+    // icon: defineAsyncComponent(() => import("~icons/icon-park-solid/like")),
+    icon: defineAsyncComponent(() => import("~icons/icon-park-outline/like")),
     path: "/home",
     children: [],
   },
   {
     title: "时间轴",
     // icon: defineAsyncComponent(() => import("~icons/icon-park-solid/alarm-clock")),
-    icon: defineAsyncComponent(() => import("~icons/icon-park-outline/alarm-clock/")),
+    icon: defineAsyncComponent(() => import("~icons/icon-park-outline/alarm-clock")),
     path: "/archive",
     children: [],
   },
@@ -23,7 +25,7 @@ const menuList = [
     title: "说说",
     path: "/talk",
     // icon: defineAsyncComponent(() => import("~icons/icon-park-solid/comment")),
-    icon: defineAsyncComponent(() => import("~icons/icon-park-outline/comment/")),
+    icon: defineAsyncComponent(() => import("~icons/icon-park-outline/comment")),
     children: [
       {
         title: "关于我xx",
@@ -35,7 +37,7 @@ const menuList = [
   {
     title: "更多",
     icon: defineAsyncComponent(() => import("~icons/icon-park-solid/align-text-right-one")),
-    icon: defineAsyncComponent(() => import("~icons/icon-park-outline/align-text-right-one/")),
+    icon: defineAsyncComponent(() => import("~icons/icon-park-outline/align-text-right-one")),
     path: "/more",
     children: [
       {
@@ -52,28 +54,32 @@ const menuList = [
   },
 ];
 
-
-const {scrollDirection} = useScrollDirection();
+const { scrollDirection } = useScrollDirection();
 
 </script>
 
 <template>
-  <div class="header-wrap" :class="{ 'hide-header': scrollDirection === 'down' }">
+  <div class="header-wrap bg-base-100 opacity-95" :class="{ 'hide-header': scrollDirection === 'down' }">
     <div class="header-left">
-      <MdiAbjadHebrew class="logo text-primary"></MdiAbjadHebrew>
+      <MdiAbjadHebrew class="logo text-base-content"></MdiAbjadHebrew>
     </div>
     <div class="header-right">
-      <div class="flex justify-end px-2">
+      <div class="flex justify-end px-2 items-center">
+        <div>
+          <button class="btn glass btn-circle mr-1">
+            <IconpParkSearch class="text-base-content" />
+          </button>
+        </div>
         <div v-for="menu in menuList" :key="menu.path" class="flex items-stretch">
           <div v-if="menu.children.length" :index="menu.path" class="dropdown dropdown-end">
             <div tabindex="0" role="button" class="btn glass m-1">
-              <component class="menu-icon text-primary" :is="menu.icon"></component>
+              <component class="menu-icon text-base-content" :is="menu.icon"></component>
               {{ menu.title }}
             </div>
             <ul tabindex="0" class="menu dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-52 p-2 shadow">
               <li v-for="subMenu in menu.children" :key="subMenu.path" :index="subMenu.path">
                 <router-link :to="subMenu.path">
-                  <component class="menu-icon text-primary" :is="subMenu.icon"></component>
+                  <component class="menu-icon text-base-content" :is="subMenu.icon"></component>
                   {{ subMenu.title }}
                 </router-link>
               </li>
@@ -81,7 +87,7 @@ const {scrollDirection} = useScrollDirection();
           </div>
           <div v-else :index="menu.path">
             <router-link :to="menu.path" class="btn glass m-1">
-              <component class="menu-icon text-primary" :is="menu.icon"></component>
+              <component class="menu-icon text-base-content" :is="menu.icon"></component>
               {{ menu.title }}
             </router-link>
           </div>

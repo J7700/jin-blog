@@ -13,21 +13,109 @@ import IconAccountBox from "~icons/mdi/account-box";
 
 <template>
   <div class="home-wrap">
-    <!-- <icon-account-box style="font-size: 1em; color: red" /> -->
-    <!-- {{ getUserId }} -->
-    <!-- <el-button type="primary" @click="add">点我</el-button> -->
     <div class="home-content">
-      <router-link to="/about">
-        <button class="btn btn-primary mt-10">去到关于</button>
-      </router-link>
+      <el-row class="mt-16">
+        <el-col :span="20">
+          <div class="card bg-base-100 shadow-xl mr-6 h-[400px]">
+            <figure>
+              <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </el-col>
+        <el-col :span="4">
+          <div class="card bg-base-100 w-96 shadow-xl h-[400px]">
+              <figure>
+                <img
+                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+        </el-col>
+      </el-row>
+      <el-row class="mt-6">
+        <el-col :span="20">
+          <div class="card bg-base-100 shadow-xl mr-6 h-[400px]">
+            <figure>
+              <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </el-col>
+        <el-col :span="4">
+          <div class="card bg-base-100 w-96 shadow-xl h-[400px]">
+              <figure>
+                <img
+                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+        </el-col>
+      </el-row>
+      <el-row class="mt-6">
+        <el-col :span="20">
+          <div class="card bg-base-100 shadow-xl mr-6 h-[400px]">
+            <figure>
+              <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </el-col>
+        <el-col :span="4">
+          <div class="card bg-base-100 w-96 shadow-xl h-[400px] mb-10">
+              <figure>
+                <img
+                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+        </el-col>
+      </el-row>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.home-wrap {
-  .home-content {
-    height: 1500px;
-  }
-}
 </style>
