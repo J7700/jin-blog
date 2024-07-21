@@ -6,7 +6,7 @@
 </template>
 
 <style lang="scss" scoped>
-.page-header-wrap{
+.page-header-wrap {
   height: 60px;
 }
 </style>

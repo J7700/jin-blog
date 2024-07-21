@@ -50,7 +50,7 @@ const menuList = [
         icon: defineAsyncComponent(() => import("~icons/fa6-regular/face-kiss-wink-heart")),
         path: "/more/test",
       }
-    ],
+    ]
   },
 ];
 
@@ -59,7 +59,7 @@ const { scrollDirection } = useScrollDirection();
 </script>
 
 <template>
-  <div class="header-wrap bg-base-100 opacity-95" :class="{ 'hide-header': scrollDirection === 'down' }">
+  <div class="header-wrap bg-base-100 opacity-75" :class="{ 'hide-header': scrollDirection === 'down' }">
     <div class="header-left">
       <MdiAbjadHebrew class="logo text-base-content"></MdiAbjadHebrew>
     </div>
