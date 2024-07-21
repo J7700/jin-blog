@@ -26,7 +26,7 @@
 import { ref, onMounted } from "vue";
 import { useThemeStore } from "@/store/themeStore";
 
-import ChevronDownCircle from "~icons/icon-park-solid/down-c";
+import ChevronDownCircle from "~icons/icon-park-outline/down-c/";
 
 const { changeThemeTo, getCurrentThemeIndex } = useThemeStore();
 

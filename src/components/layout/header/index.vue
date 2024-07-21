@@ -2,24 +2,28 @@
 import { ref, onMounted, onBeforeUnmount, defineAsyncComponent } from "vue";
 import ThemeController from "@/components/theme-controller/index.vue";
 import MdiAbjadHebrew from "~icons/mdi/abjad-hebrew";
+import useScrollDirection from "@/hooks/useScrollDirection";
 
 const menuList = [
   {
     title: "首页",
-    icon: defineAsyncComponent(() => import("~icons/icon-park-solid/like/")),
+    // icon: defineAsyncComponent(() => import("~icons/icon-park-solid/like/")),
+    icon: defineAsyncComponent(() => import("~icons/icon-park-outline/like/")),
     path: "/home",
     children: [],
   },
   {
     title: "时间轴",
-    icon: defineAsyncComponent(() => import("~icons/icon-park-solid/alarm-clock")),
+    // icon: defineAsyncComponent(() => import("~icons/icon-park-solid/alarm-clock")),
+    icon: defineAsyncComponent(() => import("~icons/icon-park-outline/alarm-clock/")),
     path: "/archive",
     children: [],
   },
   {
     title: "说说",
     path: "/talk",
-    icon: defineAsyncComponent(() => import("~icons/icon-park-solid/comment")),
+    // icon: defineAsyncComponent(() => import("~icons/icon-park-solid/comment")),
+    icon: defineAsyncComponent(() => import("~icons/icon-park-outline/comment/")),
     children: [
       {
         title: "关于我xx",
@@ -31,6 +35,7 @@ const menuList = [
   {
     title: "更多",
     icon: defineAsyncComponent(() => import("~icons/icon-park-solid/align-text-right-one")),
+    icon: defineAsyncComponent(() => import("~icons/icon-park-outline/align-text-right-one/")),
     path: "/more",
     children: [
       {
@@ -47,33 +52,13 @@ const menuList = [
   },
 ];
 
-// vue3监听鼠标滚动时候header-wrap添加隐藏hide-header动画
 
-const scrollDirection = ref(null); // 用于存储滚动方向的响应式引用  
+const {scrollDirection} = useScrollDirection();
 
-// 处理滚轮事件的方法  
-const handleWheel = (event) => {
-  const deltaY = event.deltaY;
-  if (deltaY < 0) {
-    scrollDirection.value = 'up'; // 向上滚动  
-  } else if (deltaY > 0) {
-    scrollDirection.value = 'down'; // 向下滚动  
-  }
-};
-
-// 在组件挂载后添加监听器  
-onMounted(() => {
-  window.addEventListener('wheel', handleWheel);
-});
-
-// 在组件卸载前移除监听器  
-onBeforeUnmount(() => {
-  window.removeEventListener('wheel', handleWheel);
-});
 </script>
 
 <template>
-  <div class="header-wrap" :class="{'hide-header': scrollDirection === 'down'}">
+  <div class="header-wrap" :class="{ 'hide-header': scrollDirection === 'down' }">
     <div class="header-left">
       <MdiAbjadHebrew class="logo text-primary"></MdiAbjadHebrew>
     </div>
