@@ -12,10 +12,10 @@ import IconAccountBox from "~icons/mdi/account-box";
 </script>
 
 <template>
-  <div class="home-wrap">
+  <div class="home-wrap max-w-[1280px] mx-auto">
     <div class="home-content">
       <el-row class="mt-16">
-        <el-col :span="20">
+        <el-col :span="18">
           <div class="card bg-base-100 shadow-xl mr-6 h-[400px]">
             <figure>
               <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
@@ -39,7 +39,7 @@ import IconAccountBox from "~icons/mdi/account-box";
         </el-col>
       </el-row>
       <el-row class="mt-6">
-        <el-col :span="20">
+        <el-col :span="18">
           <div class="card bg-base-100 shadow-xl mr-6 h-[400px]">
             <figure>
               <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
@@ -69,7 +69,7 @@ import IconAccountBox from "~icons/mdi/account-box";
         </el-col>
       </el-row>
       <el-row class="mt-6">
-        <el-col :span="20">
+        <el-col :span="18">
           <div class="card bg-base-100 shadow-xl mr-6 h-[400px]">
             <figure>
               <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />

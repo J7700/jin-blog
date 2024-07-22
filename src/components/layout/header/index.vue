@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount, defineAsyncComponent } from "vue";
+import { defineAsyncComponent } from "vue";
 import ThemeController from "@/components/theme-controller/index.vue";
 import MdiAbjadHebrew from "~icons/mdi/abjad-hebrew";
 import IconpParkSearch from "~icons/icon-park-outline/search";
@@ -52,7 +52,6 @@ const menuList = [
 ];
 
 const { scrollDirection } = useScrollDirection();
-
 </script>
 
 <template>
@@ -67,26 +66,28 @@ const { scrollDirection } = useScrollDirection();
             <IconpParkSearch class="text-base-content" />
           </button>
         </div>
-        <div v-for="menu in menuList" :key="menu.path" class="flex items-stretch">
-          <div v-if="menu.children.length" :index="menu.path" class="dropdown dropdown-end">
-            <div tabindex="0" role="button" class="btn glass m-1">
-              <component class="menu-icon text-base-content" :is="menu.icon"></component>
-              {{ menu.title }}
+        <div class="flex items-stretch">
+          <div v-for="menu in menuList" :key="menu.path" class="flex items-stretch">
+            <div v-if="menu.children.length" :index="menu.path" class="dropdown dropdown-end">
+              <div tabindex="0" role="button" class="btn glass m-1">
+                <component class="menu-icon text-base-content" :is="menu.icon"></component>
+                {{ menu.title }}
+              </div>
+              <ul tabindex="0" class="menu dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-52 p-2 shadow">
+                <li v-for="subMenu in menu.children" :key="subMenu.path" :index="subMenu.path">
+                  <router-link :to="subMenu.path">
+                    <component class="menu-icon text-base-content" :is="subMenu.icon"></component>
+                    {{ subMenu.title }}
+                  </router-link>
+                </li>
+              </ul>
             </div>
-            <ul tabindex="0" class="menu dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-52 p-2 shadow">
-              <li v-for="subMenu in menu.children" :key="subMenu.path" :index="subMenu.path">
-                <router-link :to="subMenu.path">
-                  <component class="menu-icon text-base-content" :is="subMenu.icon"></component>
-                  {{ subMenu.title }}
-                </router-link>
-              </li>
-            </ul>
-          </div>
-          <div v-else :index="menu.path">
-            <router-link :to="menu.path" class="btn glass m-1">
-              <component class="menu-icon text-base-content" :is="menu.icon"></component>
-              {{ menu.title }}
-            </router-link>
+            <div v-else :index="menu.path">
+              <router-link :to="menu.path" class="btn glass m-1">
+                <component class="menu-icon text-base-content" :is="menu.icon"></component>
+                {{ menu.title }}
+              </router-link>
+            </div>
           </div>
         </div>
         <ThemeController class="theme-controller" </ThemeController>
@@ -136,6 +137,13 @@ const { scrollDirection } = useScrollDirection();
     to {
       transform: translateY(-60px)
     }
+  }
+}
+
+// 767px 以下隐藏
+@media (max-width: 767px) {
+  .header-wrap {
+    display: none;
   }
 }
 </style>

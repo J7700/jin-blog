@@ -4,10 +4,10 @@ import BgComponents from "@/components/bg-components/index.vue";
 </script>
 
 <template>
+  <PageHeader></PageHeader>
   <div class="main-wrap place-items-center from-primary to-base-100 bg-gradient-to-bl hero-overlay">
     <BgComponents></BgComponents>
-    <PageHeader></PageHeader>
-    <div class="max-w-[1280px] mx-auto">
+    <div>
       <router-view></router-view>
     </div>
   </div>
