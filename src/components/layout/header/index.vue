@@ -9,14 +9,12 @@ import useScrollDirection from "@/hooks/useScrollDirection";
 const menuList = [
   {
     title: "首页",
-    // icon: defineAsyncComponent(() => import("~icons/icon-park-solid/like")),
     icon: defineAsyncComponent(() => import("~icons/icon-park-outline/like")),
     path: "/home",
     children: [],
   },
   {
     title: "时间轴",
-    // icon: defineAsyncComponent(() => import("~icons/icon-park-solid/alarm-clock")),
     icon: defineAsyncComponent(() => import("~icons/icon-park-outline/alarm-clock")),
     path: "/archive",
     children: [],
@@ -24,7 +22,6 @@ const menuList = [
   {
     title: "说说",
     path: "/talk",
-    // icon: defineAsyncComponent(() => import("~icons/icon-park-solid/comment")),
     icon: defineAsyncComponent(() => import("~icons/icon-park-outline/comment")),
     children: [
       {

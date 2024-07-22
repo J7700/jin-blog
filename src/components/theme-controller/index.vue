@@ -211,27 +211,12 @@ onMounted(() => {
       Theme
       <ChevronDownCircle class="text-base-content" />
     </div>
-    <ul
-      tabindex="0"
-      class="dropdown-content menu flex-row bg-base-100 rounded-box z-[1] w-[16rem] p-2 shadow mt-[10px] max-h-[300px]"
-    >
-      <li
-        class="w-full"
-        v-for="(theme, index) in themeList"
-        @click="changeTheme($event, index, theme.id)"
-      >
-        <div
-          :data-theme="theme.id"
-          class="flex justify-between bg-transparent active:!bg-transparent"
-        >
-          <input
-            type="radio"
-            name="theme-dropdown"
-            :aria-label="theme.name"
-            :value="theme.id"
-            :checked="index == themeIndex"
-            class="theme-controller btn btn-sm w-3/4 justify-normal"
-          />
+    <ul tabindex="0"
+      class="dropdown-content menu flex-row bg-base-100 rounded-box z-[1] w-[16rem] p-2 shadow mt-[10px] max-h-[300px]">
+      <li class="w-full" v-for="(theme, index) in themeList" @click="changeTheme($event, index, theme.id)">
+        <div :data-theme="theme.id" class="flex justify-between bg-transparent active:!bg-transparent">
+          <input type="radio" name="theme-dropdown" :aria-label="theme.name" :value="theme.id"
+            :checked="index == themeIndex" class="theme-controller btn btn-sm w-3/4 justify-normal" />
           <div class="flex shrink-0 flex-wrap gap-1">
             <div class="h-[1.25rem] w-2 rounded bg-primary" />
             <div class="h-[1.25rem] w-2 rounded bg-secondary" />
