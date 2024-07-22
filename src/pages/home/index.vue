@@ -9,11 +9,13 @@ const add = () => {
 };
 
 import IconAccountBox from "~icons/mdi/account-box";
+import BgComponents from "@/components/bg-components/index.vue";
 </script>
 
 <template>
-  <div class="home-wrap max-w-[1280px] mx-auto">
-    <div class="home-content">
+  <div class="home-wrap">
+    <BgComponents></BgComponents>
+    <div class="home-content max-w-[1280px] mx-auto">
       <el-row class="mt-16">
         <el-col :span="18">
           <div class="card bg-base-100 shadow-xl mr-6 h-[400px]">
