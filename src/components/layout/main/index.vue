@@ -1,6 +1,6 @@
 <script setup>
-import PageHeader from "@/components/page-header/index.vue";
-import BgComponents from "@/components/bg-components/index.vue";
+import PageHeader from '@/components/page-header/index.vue'
+import BgComponents from '@/components/bg-components/index.vue'
 </script>
 
 <template>

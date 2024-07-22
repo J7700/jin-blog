@@ -1,17 +1,17 @@
 <script setup>
-import { computed } from "vue";
+import { computed } from 'vue'
 const props = defineProps({
   name: {
     type: String,
-    default: "",
+    default: ''
   },
   prefix: {
     type: String,
-    default: "icon",
-  },
-});
+    default: 'icon'
+  }
+})
 
-const symbolId = computed(() => `#${props.prefix}-${props.name}`);
+const symbolId = computed(() => `#${props.prefix}-${props.name}`)
 </script>
 
 <template>

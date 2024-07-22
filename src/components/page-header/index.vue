@@ -1,7 +1,7 @@
 <script setup>
-import ThemeController from "@/components/theme-controller/index.vue";
-import MdiAbjadHebrew from "~icons/mdi/abjad-hebrew";
-import IconpParkSearch from "~icons/icon-park-outline/search";
+import ThemeController from '@/components/theme-controller/index.vue'
+import MdiAbjadHebrew from '~icons/mdi/abjad-hebrew'
+import IconpParkSearch from '~icons/icon-park-outline/search'
 </script>
 
 <template>
@@ -16,7 +16,7 @@ import IconpParkSearch from "~icons/icon-park-outline/search";
             <IconpParkSearch class="text-base-content" />
           </button>
         </div>
-        <ThemeController class="theme-controller" </ThemeController>
+        <ThemeController class="theme-controller"></ThemeController>
       </div>
     </div>
   </div>

@@ -1,15 +1,15 @@
 <script setup>
-import { storeToRefs } from "pinia";
-import { user } from "@/store/index.js";
+import { storeToRefs } from 'pinia'
+import { user } from '@/store/index.js'
 
-const { getUserId } = storeToRefs(user());
+const { getUserId } = storeToRefs(user())
 
 const add = () => {
-  user().setUserId();
-};
+  user().setUserId()
+}
 
-import IconAccountBox from "~icons/mdi/account-box";
-import BgComponents from "@/components/bg-components/index.vue";
+import IconAccountBox from '~icons/mdi/account-box'
+import BgComponents from '@/components/bg-components/index.vue'
 </script>
 
 <template>
@@ -20,7 +20,10 @@ import BgComponents from "@/components/bg-components/index.vue";
         <el-col :span="18">
           <div class="card bg-base-100 shadow-xl mr-6 h-[400px]">
             <figure>
-              <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+              />
             </figure>
             <div class="card-body">
               <h2 class="card-title">Shoes!</h2>
@@ -44,7 +47,10 @@ import BgComponents from "@/components/bg-components/index.vue";
         <el-col :span="18">
           <div class="card bg-base-100 shadow-xl mr-6 h-[400px]">
             <figure>
-              <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+              />
             </figure>
             <div class="card-body">
               <h2 class="card-title">Shoes!</h2>
@@ -58,7 +64,10 @@ import BgComponents from "@/components/bg-components/index.vue";
         <el-col :span="4">
           <div class="card bg-base-100 w-96 shadow-xl h-[400px]">
             <figure>
-              <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+              />
             </figure>
             <div class="card-body">
               <h2 class="card-title">Shoes!</h2>
@@ -74,7 +83,10 @@ import BgComponents from "@/components/bg-components/index.vue";
         <el-col :span="18">
           <div class="card bg-base-100 shadow-xl mr-6 h-[400px]">
             <figure>
-              <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+              />
             </figure>
             <div class="card-body">
               <h2 class="card-title">Shoes!</h2>
@@ -88,7 +100,10 @@ import BgComponents from "@/components/bg-components/index.vue";
         <el-col :span="4">
           <div class="card bg-base-100 w-96 shadow-xl h-[400px] mb-10">
             <figure>
-              <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+              />
             </figure>
             <div class="card-body">
               <h2 class="card-title">Shoes!</h2>
