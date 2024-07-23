@@ -21,7 +21,7 @@ const computedBackgroundImage = computed(() => ({
 </script>
 
 <template>
-  <div>
+  <div class="bg-components-wrap">
     <div class="home-content-bg" :style="computedBackgroundImage">
       <div class="max-w-[1280px] mx-auto flex items-center justify-center flex-col h-full">
         <h1 class="text-5xl text-base-100">{{ title }}</h1>
