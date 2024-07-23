@@ -1,8 +1,10 @@
 <script setup>
+import BgComponents from '@/components/bg-components/index.vue'
 </script>
 
 <template>
   <div class="home-wrap">
+    <BgComponents></BgComponents>
     <div class="home-content max-w-[1280px] mx-auto">
       <el-row class="mt-16">
         <el-col :span="18">
