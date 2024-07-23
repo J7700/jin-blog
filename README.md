@@ -22,3 +22,8 @@ https://blog.csdn.net/qq_40296909/article/details/134285451
 npm uninstall vue3-perfect-scrollbar
 
 更新响应式导航栏 2.0
+
+// 先拉再写。先拉在推
+
+// git status
+// 作用：查看当前工作区和暂存区的状态
