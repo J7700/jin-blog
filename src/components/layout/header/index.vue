@@ -145,11 +145,4 @@ const { scrollDirection } = useScrollDirection()
     }
   }
 }
-
-// 767px 以下隐藏
-@media (max-width: 767px) {
-  .header-wrap {
-    display: none;
-  }
-}
 </style>

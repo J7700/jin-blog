@@ -1,20 +1,8 @@
 <script setup>
-import { storeToRefs } from 'pinia'
-import { user } from '@/store/index.js'
-
-const { getUserId } = storeToRefs(user())
-
-const add = () => {
-  user().setUserId()
-}
-
-import IconAccountBox from '~icons/mdi/account-box'
-import BgComponents from '@/components/bg-components/index.vue'
 </script>
 
 <template>
   <div class="home-wrap">
-    <BgComponents></BgComponents>
     <div class="home-content max-w-[1280px] mx-auto">
       <el-row class="mt-16">
         <el-col :span="18">
