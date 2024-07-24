@@ -41,6 +41,8 @@
 - right
 - center
 - footer
+- bottom
+
 
 ### Todo Tree 插件说明
 
