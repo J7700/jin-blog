@@ -63,7 +63,7 @@ const computedBackgroundImage = computed(() => ({
     }
     @media (min-width: 1920px) {
       // 3xl
-      height: 800px;
+      height: 700px;
     }
     .bg-components-container {
       height: 100%;
@@ -91,7 +91,7 @@ const computedBackgroundImage = computed(() => ({
           }
           @media (min-width: 1280px) {
             // xl
-            font-size: 4rem;
+            font-size: 3.5rem;
           }
         }
       }

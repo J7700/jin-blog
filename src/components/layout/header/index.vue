@@ -55,19 +55,19 @@ const { scrollDirection } = useScrollDirection()
 </script>
 
 <template>
-  <div class="header-wrap bg-base-100 opacity-75" :class="{ 'hide-header': scrollDirection === 'down' }">
+  <div class="header-wrap bg-base-100" :class="{ 'hide-header': scrollDirection === 'down' }">
     <div class="header-left">
       <MdiAbjadHebrew class="logo text-base-content"></MdiAbjadHebrew>
     </div>
     <div class="header-right">
-      <div class="flex justify-end px-2 items-center">
-        <div>
-          <button class="btn glass btn-circle mr-1">
+      <div class="header-right-container">
+        <div class="header-right-search">
+          <button class="btn glass btn-circle">
             <IconParkSearch class="text-base-content" />
           </button>
         </div>
-        <div class="flex items-stretch">
-          <div v-for="menu in menuList" :key="menu.path" class="flex items-stretch">
+        <div class="header-right-nav">
+          <div v-for="menu in menuList" :key="menu.path" class="header-right-menu">
             <div v-if="menu.children.length" :index="menu.path" class="dropdown dropdown-end">
               <div tabindex="0" role="button" class="btn glass m-1">
                 <component class="menu-icon text-base-content" :is="menu.icon"></component>
@@ -100,7 +100,14 @@ const { scrollDirection } = useScrollDirection()
 .header-wrap {
   display: flex;
   align-items: center;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  padding: 10px;
+  opacity: 0.75;
+  z-index: 999;
   .header-left {
     width: 20%;
 
@@ -121,6 +128,25 @@ const { scrollDirection } = useScrollDirection()
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    .header-right-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 0.5rem;
+      .header-right-search {
+        button {
+          margin-right: 0.25rem;
+        }
+      }
+      .header-right-nav {
+        display: flex;
+        align-items: stretch;
+        .header-right-menu {
+          display: flex;
+          align-items: stretch;
+        }
+      }
+    }
   }
 }
 

@@ -14,8 +14,8 @@
 
 ### GIT 操作指南
 
-- git status 作用：查看当前工作区和暂存区的状态
 - 先拉再写 先拉在推
+- git status 作用：查看当前工作区和暂存区的状态
 - 提交网络测试：ping github.com
 - git config --global --unset http.proxy
 - git config --global --unset https.proxy
@@ -42,7 +42,6 @@
 - center
 - footer
 - bottom
-
 
 ### Todo Tree 插件说明
 

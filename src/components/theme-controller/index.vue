@@ -165,9 +165,7 @@ function _changeTheme(event, index, themeName) {
   const isSameTheme = themeIndex.value === themeName
   changeThemeTo(index, themeName)
   if (document.startViewTransition === undefined) {
-    throw new Error(
-      'document.startViewTransition is undefined, please update your browser to the latest version or use a modern browser.'
-    )
+    throw new Error('document.startViewTransition is undefined, please update your browser to the latest version or use a modern browser.')
   }
   const x = event.clientX
   const y = event.clientY
@@ -203,19 +201,9 @@ onMounted(() => {
       Theme
       <ChevronDownCircle class="text-base-content" />
     </div>
-    <ul
-      tabindex="0"
-      class="dropdown-content menu flex-row bg-base-100 rounded-box z-[1] w-[16rem] p-2 shadow mt-[10px] max-h-[300px]"
-    >
-      <li
-        class="w-full"
-        v-for="(theme, index) in themeList"
-        @click="changeTheme($event, index, theme.id)"
-      >
-        <div
-          :data-theme="theme.id"
-          class="flex justify-between bg-transparent active:!bg-transparent"
-        >
+    <ul tabindex="0" class="dropdown-content menu flex-row bg-base-100 rounded-box z-[1] w-[16rem] p-2 shadow mt-[10px] max-h-[300px]">
+      <li class="w-full" v-for="(theme, index) in themeList" @click="changeTheme($event, index, theme.id)">
+        <div :data-theme="theme.id" class="flex justify-between bg-transparent active:!bg-transparent">
           <input
             type="radio"
             name="theme-dropdown"
