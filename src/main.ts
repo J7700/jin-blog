@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 // 引入路由
-import router from './router/index.js'
+import router from './router/index'
 // 引用pinia
 import { createPinia } from 'pinia'
 // 引入pinia-plugin-persist持久化存储

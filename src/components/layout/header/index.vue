@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import { defineAsyncComponent } from 'vue'
 import ThemeController from '@/components/theme-controller/index.vue'
 import MdiAbjadHebrew from '~icons/mdi/abjad-hebrew'

@@ -1,4 +1,4 @@
-<script setup></script>
+<script lang="ts" setup></script>
 
 <template>
   <div class="main-wrap from-primary to-base-100 bg-gradient-to-bl hero-overlay">

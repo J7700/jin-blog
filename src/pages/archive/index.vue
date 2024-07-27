@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import BgComponents from '@/components/bg-components/index.vue'
 import bgImage from '@/assets/image/bg/01.png'
 </script>

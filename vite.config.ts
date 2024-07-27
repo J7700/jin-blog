@@ -26,7 +26,7 @@ export default defineConfig({
   server: {
     port: 8080, // 配置前端项目启动端口
     host: '0.0.0.0', // 配置前端项目启动地址
-    https: false, // 是否启用 https
+    https: undefined, // 是否启用 https
     open: true, // 启动后自动打开浏览器
     // 热更新
     hmr: {
@@ -39,23 +39,6 @@ export default defineConfig({
         target: 'http://localhost:8888', // 代理到的地址
         changeOrigin: true, // 是否跨域
         rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    },
-    // 打包输出
-    build: {
-      sourcemap: false, // 是否生成 source map 文件
-      // 消除打包大小超过400kb警告
-      chunkSizeWarningLimit: 4000,
-      rollupOptions: {
-        input: {
-          index: resolve('index.html') // 入口文件
-        },
-        // 静态资源分类打包
-        output: {
-          chunkFileNames: 'static/js/[name]-[hash].js',
-          entryFileNames: 'static/js/[name]-[hash].js',
-          assetFileNames: 'static/[ext]/[name]-[hash].[ext]'
-        }
       }
     }
   },
@@ -89,6 +72,23 @@ export default defineConfig({
     alias: {
       // '@' 将指向 'src' 目录
       '@': resolve(__dirname, 'src')
+    }
+  },
+  // 打包输出
+  build: {
+    sourcemap: false, // 是否生成 source map 文件
+    // 消除打包大小超过400kb警告
+    chunkSizeWarningLimit: 4000,
+    rollupOptions: {
+      input: {
+        index: resolve('index.html') // 入口文件
+      },
+      // 静态资源分类打包
+      output: {
+        chunkFileNames: 'static/js/[name]-[hash].js',
+        entryFileNames: 'static/js/[name]-[hash].js',
+        assetFileNames: 'static/[ext]/[name]-[hash].[ext]'
+      }
     }
   }
 })

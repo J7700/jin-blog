@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import Header from './header/index.vue'
 import Main from './main/index.vue'
 import Footer from './footer/index.vue'

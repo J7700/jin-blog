@@ -14,13 +14,13 @@ const useHeaderWheel = () => {
   // 在组件挂载后添加监听器
   onMounted(() => {
     const ele = document.querySelector('body')
-    ele.addEventListener('scroll', handleWheel)
+    ele?.addEventListener('scroll', handleWheel)
   })
 
   // 在组件卸载前移除监听器
   onBeforeUnmount(() => {
     const ele = document.querySelector('body')
-    ele.removeEventListener('scroll', handleWheel)
+    ele?.removeEventListener('scroll', handleWheel)
   })
 
   return {
