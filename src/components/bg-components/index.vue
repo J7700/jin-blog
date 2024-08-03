@@ -15,19 +15,19 @@ const props = defineProps({
   }
 })
 
-const computedBackgroundImage = computed(() => ({
+const bgStyle = computed(() => ({
   backgroundImage: `url(${props.bgImage})`
 }))
 </script>
 
 <template>
-  <div class="bg-components-wrap">
-    <div class="bg-components-bg" :style="computedBackgroundImage">
-      <div class="bg-components-container">
-        <div class="bg-components-top">
+  <div class="wrap">
+    <div class="bg" :style="bgStyle">
+      <div class="container">
+        <div class="header">
           <h1 class="text-base-100">{{ title }}</h1>
         </div>
-        <div class="bg-components-bottom">
+        <div class="bottom">
           <p class="text-base-100">
             {{ text }}
           </p>
@@ -38,8 +38,8 @@ const computedBackgroundImage = computed(() => ({
 </template>
 
 <style lang="scss" scoped>
-.bg-components-wrap {
-  .bg-components-bg {
+.wrap {
+  .bg {
     height: 400px;
     width: 100%;
     background-size: cover;
@@ -65,7 +65,7 @@ const computedBackgroundImage = computed(() => ({
       // 3xl
       height: 700px;
     }
-    .bg-components-container {
+    .container {
       height: 100%;
       max-width: 1280px;
       margin: 0 auto;
@@ -77,7 +77,7 @@ const computedBackgroundImage = computed(() => ({
         padding: 0 20px;
         align-items: center;
       }
-      .bg-components-top {
+      .header {
         h1 {
           font-size: 2.5rem;
           font-weight: 700;
@@ -95,12 +95,12 @@ const computedBackgroundImage = computed(() => ({
           }
         }
       }
-      .bg-components-bottom {
+      .bottom {
         p {
           font-size: 1.225rem;
           font-weight: 500;
           opacity: 0.8;
-          margin-top: 20px;
+          margin-header: 20px;
           @media (min-width: 768px) {
             // md
             font-size: 1.525rem;

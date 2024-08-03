@@ -42,6 +42,7 @@
 - center
 - footer
 - bottom
+- common
 
 ### Todo Tree 插件说明
 
