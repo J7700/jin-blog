@@ -100,7 +100,7 @@ const bgStyle = computed(() => ({
           font-size: 1.225rem;
           font-weight: 500;
           opacity: 0.8;
-          margin-header: 20px;
+          margin-bottom: 20px;
           @media (min-width: 768px) {
             // md
             font-size: 1.525rem;

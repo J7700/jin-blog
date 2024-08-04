@@ -24,7 +24,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    port: 8080, // 配置前端项目启动端口
+    port: 8090, // 配置前端项目启动端口
     host: '0.0.0.0', // 配置前端项目启动地址
     https: undefined, // 是否启用 https
     open: true, // 启动后自动打开浏览器
